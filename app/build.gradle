@@ -35,4 +35,8 @@ dependencies {
 
     // ViewModel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    // JUnit Testing
+    testImplementation 'junit:junit:4.12'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.27.0'
 }
