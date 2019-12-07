@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".detail.DetailCourseActivity"
+            android:name="com.niki.dicodingjetpackpro.ui.detail.DetailCourseActivity"
             android:label="@string/title_activity_detail_course"
-            android:parentActivityName=".home.HomeActivity"
+            android:parentActivityName="com.niki.dicodingjetpackpro.ui.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.niki.dicodingjetpackpro.home.HomeActivity" />
+                android:value="com.niki.dicodingjetpackpro.ui.home.HomeActivity" />
         </activity>
-        <activity android:name=".reader.CourseReaderActivity" />
+        <activity android:name="com.niki.dicodingjetpackpro.ui.reader.CourseReaderActivity" />
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.niki.dicodingjetpackpro.ui.home.HomeActivity"
             android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

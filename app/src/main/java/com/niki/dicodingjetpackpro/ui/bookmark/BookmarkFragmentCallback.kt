@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.bookmark
+package com.niki.dicodingjetpackpro.ui.bookmark
 
 import com.niki.dicodingjetpackpro.data.CourseEntity
 

@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.academy
+package com.niki.dicodingjetpackpro.ui.academy
 
 import android.content.Context
 import android.content.Intent
@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.niki.dicodingjetpackpro.R
 import com.niki.dicodingjetpackpro.data.CourseEntity
-import com.niki.dicodingjetpackpro.detail.DetailCourseActivity
+import com.niki.dicodingjetpackpro.ui.detail.DetailCourseActivity
 import kotlinx.android.synthetic.main.items_academy.view.*
 
 

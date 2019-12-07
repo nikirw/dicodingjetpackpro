@@ -1,19 +1,16 @@
-package com.niki.dicodingjetpackpro.bookmark
+package com.niki.dicodingjetpackpro.ui.bookmark
 
 import android.app.Activity
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.niki.dicodingjetpackpro.R
 import com.niki.dicodingjetpackpro.data.CourseEntity
-import com.niki.dicodingjetpackpro.detail.DetailCourseActivity
+import com.niki.dicodingjetpackpro.ui.detail.DetailCourseActivity
 import kotlinx.android.synthetic.main.items_bookmark.view.*
 
 

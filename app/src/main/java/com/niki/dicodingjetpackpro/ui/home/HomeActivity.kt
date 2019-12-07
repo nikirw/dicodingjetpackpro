@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.home
+package com.niki.dicodingjetpackpro.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.niki.dicodingjetpackpro.R
-import com.niki.dicodingjetpackpro.academy.AcademyFragment
-import com.niki.dicodingjetpackpro.bookmark.BookmarkFragment
+import com.niki.dicodingjetpackpro.ui.academy.AcademyFragment
+import com.niki.dicodingjetpackpro.ui.bookmark.BookmarkFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 

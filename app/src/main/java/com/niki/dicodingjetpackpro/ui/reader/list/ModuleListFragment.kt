@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.reader.list
+package com.niki.dicodingjetpackpro.ui.reader.list
 
 
 import android.os.Bundle
@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.niki.dicodingjetpackpro.R
 import com.niki.dicodingjetpackpro.data.ModuleEntity
-import com.niki.dicodingjetpackpro.reader.CourseReaderActivity
+import com.niki.dicodingjetpackpro.ui.reader.CourseReaderActivity
+import com.niki.dicodingjetpackpro.ui.reader.CourseReaderViewModel
 import com.niki.dicodingjetpackpro.utils.DataDummy
 import kotlinx.android.synthetic.main.fragment_module_list.*
 
@@ -21,6 +23,8 @@ import kotlinx.android.synthetic.main.fragment_module_list.*
 class ModuleListFragment : Fragment() {
 
     lateinit var adapter: ModuleListAdapter
+    lateinit var viewModel: CourseReaderViewModel
+
     fun ModuleListFragment() { // Required empty public constructor
     }
 
@@ -40,11 +44,13 @@ class ModuleListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         if (activity != null) {
+            viewModel = ViewModelProviders.of(activity!!).get(CourseReaderViewModel::class.java)
             adapter = ModuleListAdapter();
-            adapter.setOnClickListener { i, s ->
-                (activity as CourseReaderActivity).moveTo(i, s)
+            adapter.setOnClickListener { position, moduleId ->
+                (activity as CourseReaderActivity).moveTo(position, moduleId)
+                viewModel.setSelectedModule(moduleId)
             }
-            populateRecyclerView(DataDummy.generateDummyModules("a14"));
+            populateRecyclerView(viewModel.getModules());
         }
     }
 

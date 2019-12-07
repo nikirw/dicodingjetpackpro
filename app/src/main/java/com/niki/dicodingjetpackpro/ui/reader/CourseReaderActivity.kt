@@ -1,15 +1,18 @@
-package com.niki.dicodingjetpackpro.reader
+package com.niki.dicodingjetpackpro.ui.reader
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModelProviders
 import com.niki.dicodingjetpackpro.R
-import com.niki.dicodingjetpackpro.reader.content.ModuleContentFragment
-import com.niki.dicodingjetpackpro.reader.list.ModuleListFragment
+import com.niki.dicodingjetpackpro.ui.reader.content.ModuleContentFragment
+import com.niki.dicodingjetpackpro.ui.reader.list.ModuleListFragment
 
 
 class CourseReaderActivity : AppCompatActivity() {
+
+    lateinit var viewModel: CourseReaderViewModel
 
     companion object {
         const val EXTRA_COURSE_ID = "extra_course_id"
@@ -18,10 +21,14 @@ class CourseReaderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course_reader)
+
+        viewModel = ViewModelProviders.of(this).get(CourseReaderViewModel::class.java)
+
         val bundle = intent.extras
         if (bundle != null) {
             val courseId = bundle.getString(EXTRA_COURSE_ID)
             if (courseId != null) {
+                viewModel.setCourseId(courseId)
                 populateFragment()
             }
         }

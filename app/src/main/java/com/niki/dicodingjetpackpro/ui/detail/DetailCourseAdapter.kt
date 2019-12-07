@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.detail
+package com.niki.dicodingjetpackpro.ui.detail
 
 import android.view.LayoutInflater
 import android.view.View

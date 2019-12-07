@@ -1,4 +1,4 @@
-package com.niki.dicodingjetpackpro.reader.list
+package com.niki.dicodingjetpackpro.ui.reader.list
 
 import android.view.LayoutInflater
 import android.view.View
